@@ -1,0 +1,27 @@
+
+<div ng-controller="PeopleController as people" ng-init="people.formUpdate=false">
+	<div ng-hide="people.formUpdate">
+		<form ng-submit="people.addItem()">
+			Name:
+			<input type="text" name="name" ng-model="people.name">
+			<input type="submit" value="Add">
+		</form>
+	</div>
+	<div ng-show="people.formUpdate">
+		<form ng-submit="people.updateItem()">
+			Name:
+			<input type="hidden" name="id" ng-model="people.id">
+			<input type="text" name="name" ng-model="people.name">
+			<input type="submit" value="Update">
+		</form>
+	</div>
+	<ul>
+		<li ng-repeat="item in people.items">
+			{{{{raw-helper}}}}
+				{{item.name}}
+				<a href="#" ng-click="people.deleteItem(item._id)">Delete</a>
+				<a href="#" ng-click="people.toUpdateItem(item._id);">Update</a>
+			{{{{/raw-helper}}}}
+		</li>
+	</ul>
+</div>
