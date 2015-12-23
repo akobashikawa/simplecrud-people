@@ -2,7 +2,8 @@
 Ejemplo de CRUD simple.
 
 ## Instalación
-- Clonar el repositorio
-- ```npm install```
+- Clonar el repositorio y ubicarse en el directorio del proyecto
+- ```$ npm install```
 - Editar ```config.js``` para ajustar el url de la base de datos mongo a usar.
-- ```npm start```
+- ```$ npm start```
+- En un navegador, entrar a ```http://localhost:3000```
